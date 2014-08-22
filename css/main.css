@@ -1,0 +1,19 @@
+.techBlue {
+	background-color: #002F8B;
+}
+
+.techRed {
+	background-color: #E31B23;
+}
+
+.techWhite {
+	background-color: white;
+}
+
+.nav.navbar-nav li:hover {
+	background-color: #002F8B;
+}
+
+.nav.navbar-nav li:hover a {
+	color: white;
+}
