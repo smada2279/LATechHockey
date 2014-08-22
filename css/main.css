@@ -9,11 +9,30 @@
 .techWhite {
 	background-color: white;
 }
-
+/*
 .nav.navbar-nav li:hover {
 	background-color: #002F8B;
 }
 
-.nav.navbar-nav li:hover a {
+.nav.navbar-nav li:hover > a {
+	background-color: #002F8B;
 	color: white;
 }
+
+.nav.navbar-nav > li.open > a, .nav.navbar-nav > li.open > a:focus {
+	background-color: #E31B23;
+	color: white;
+}
+
+.navbar .nav > li.dropdown.open.active > a:hover {
+	background-color: #002F8B;
+	color: white;
+}
+
+.dropdown-menu li:hover > a {
+	background-color: #002F8B !important;
+	color: white;
+}
+
+.menu-item:hover > a{
+	background-color: #002F8B; */
