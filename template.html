@@ -1,86 +1,101 @@
 <!DOCTYPE HTML>
-<head>
-	<link rel="stylesheet" href="css/magic-bootstrap-min.css" />
-	<!--<link rel="stylesheet" href="css/bootstrap-theme.min.css" /> -->
-	<link rel="stylesheet" href="css/main.css" />
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<title>Louisiana Tech Hockey | </title>
-</head>
-
-<body class="techBlue">
-	<div class="container techWhite">
-		<div class="row techBlue" >
-			<div class="col-sm-2">
-				<img class="img-responsive" src="img/LATechLogo.gif"/>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="css/magic-bootstrap-min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<title>Louisiana Tech Hockey | </title>
+	</head>
+	
+	<body class="techBlue">
+		<div class="container">
+			<div class="row techBlue" >
+				<div class="col-sm-6">
+					<a href="index.html"><img class="img-responsive" src="img/HeaderImage.png" height="300px"/></a>
+				</div>
+				<!--Display social media buttons on desktop. Hide on mobile-->
+				<div class="col-sm-4 col-sm-offset-2 socialMediaButtons hidden-xs" align="right">
+						<a href="#"><img class="img-responsive" src="img/youtube.png"></a>
+						<a href="#"><img class="img-responsive" src="img/instagram.png"></a>
+						<a href="https://twitter.com/LATECHHOCKEY"><img class="img-responsive" src="img/twitter.png" ></a>
+						<a href="https://www.facebook.com/pages/Louisiana-Tech-Hockey/343026243856"><img class="img-responsive" src="img/facebook.png"></a>
+				</div>
 			</div>
-			<div class="col-sm-4 col-sm-offset-6" align="right">
-				<ul class="socialMediaButtons">
-					<li><a href="https://www.facebook.com/pages/Louisiana-Tech-Hockey/343026243856"><img class="img-responsive" src="img/64-facebook.png"></a></li>
-					<li><a href="https://twitter.com/LATECHHOCKEY"><img class="img-responsive" src="img/64-twitter.png" ></a></li>
-					<li><a href="#"><img class="img-responsive" src="img/64-instagram.png"></a></li>
-					<li><a href="#"><img class="img-responsive" src="img/64-youtube.png"></a></li>
-				</ul>
+			<div class="row techWhite">
+				<header class="navbar navbar-default" role="banner">
+					<div class="navbar-header">
+						<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle Navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<nav class="collapse navbar-collapse nav-tabs" role="navigation">
+						<ul class="nav navbar-nav">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">The Team<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li class="menu-item"><a href="roster.php">Roster</a></li>
+									<li class="menu-item"><a href="#">Player Bios</a></li>
+									<li class="menu-item"><a href="#">Alumni</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">News</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Schedule<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li class="menu-item"><a href="#">Team Schedule</a></li>
+									<li class="menu-item"><a href="#">Upcoming Events</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Standings</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Statistics<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li class="menu-item"><a href="#">Team Statistics</a></li>
+									<li class="menu-item"><a href="#">Player Statistics</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Media</a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li class="menu-item"><a href="#">Administrative Staff</a></li>
+									<li class="menu-item"><a href="#">Team History</a></li>
+									<li class="menu-item"><a href="#">Sponsors</a></li>
+						</ul>
+					</nav>
+				</header>
+			</div>
+			<!-- Content --> 
+			<div class="row">
 				
 			</div>
-		</div>
-		<div class="row">
-			 
-			<header class="navbar navbar-default" role="banner">
-				<div class="navbar-header">
-					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle Navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+			<!-- Footer -->
+			<!--Display the Bulldogs Hockey Logo on desktop-->
+			<div class="row techBlue footer hidden-xs">  
+				<img src="img/BulldogsHockeyLogo.png" class="center-block" height="100px"/>
+			</div>
+			<!--Display the social media buttons on the bottom on mobile-->
+			<div class="row">
+				<div class="techBlue hidden-lg hidden-md hidden-sm col-xs-12">
+					<div class="socialMediaButtonsBottom center-block">
+						<a href="https://www.facebook.com/pages/Louisiana-Tech-Hockey/343026243856"><img src="img/facebook.png"/></a>
+						<a href="https://twitter.com/LATECHHOCKEY"><img src="img/twitter.png" /></a>
+						<a href="#"><img src="img/instagram.png"/></a>
+						<a href="#"><img src="img/youtube.png"/></a>
+					</div>
 				</div>
-				<nav class="collapse navbar-collapse nav-tabs" role="navigation">
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">The Team<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li class="menu-item"><a href="#">Roster</a></li>
-								<li class="menu-item"><a href="#">Player Bios</a></li>
-								<li class="menu-item"><a href="#">Alumni</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">News</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Schedule<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li class="menu-item"><a href="#">Team Schedule</a></li>
-								<li class="menu-item"><a href="#">Upcoming Events</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Standings</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Statistics<span class="caret"></span></a>
-							<ul class="dropdown-menu" role="menu">
-								<li class="menu-item"><a href="#">Team Statistics</a></li>
-								<li class="menu-item"><a href="#">Player Statistics</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">Media</a>
-						</li>
-						<li>
-							<a href="#">About</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
+			</div>
 		</div>
-		<div class="row"> <!-- Content --> 
-			
-		</div>
-		<div class="row"> <!-- Footer --> 
-			
-		</div>
-		
-	</div>
+	</html>
 </body>

@@ -53,7 +53,7 @@
 			$innertext = str_replace("<br>", "~", $nElem->innertext);
 			$innertext = str_replace("<b>", "~", $innertext);
 			$innertext = str_replace("</b>", "~", $innertext);
-			$innertext = addslashes($innertext);
+			$innertext = str_replace("\"", "\\\"", $innertext);
 			$arr = explode("~", $innertext);
 			
 			// indicates we are parsing the first column of information

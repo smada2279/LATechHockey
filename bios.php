@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<title>Louisiana Tech Hockey | </title>
+		<title>Louisiana Tech Hockey | Player Bios</title>
 	</head>
 	
 	<body class="techBlue">
@@ -24,7 +24,6 @@
 				</div>
 			</div>
 			<div class="row techWhite">
-				 
 				<header class="navbar navbar-default" role="banner">
 					<div class="navbar-header">
 						<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -78,9 +77,26 @@
 				</header>
 			</div>
 			<!-- Content --> 
-			<div class="row">
-				
+			<div class="row techWhite">
+				<div class="col-md-12">
+					<h1>Player Bios</h1>
+					<hr>
+				</div>
 			</div>
+			<div class="row techWhite">
+				<div class="col-md-6">
+					<h2>Player Name</h2>
+					<p>Position</p>
+					<p>Hometown</p>
+					<p>Height/Weight</p>
+					<p>Classification/Major</p>
+					<p>Active seasons</p>
+				</div>
+				<div class="col-md-6">
+					<img src="img/LaTechPlayer.jpg" width="367px">
+				</div>	
+			</div>
+			
 			<!-- Footer -->
 			<!--Display the Bulldogs Hockey Logo on desktop-->
 			<div class="row techBlue footer hidden-xs">  

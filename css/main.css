@@ -10,13 +10,52 @@
 	background-color: white;
 }
 
-.socialMediaButtons li {
-	display:inline-block;
+.socialMediaButtons a{
+	display:inline;
+	float: right;
 	vertical-align: bottom;
 	margin: 0;	
 	padding: 0;
 }
-.socialMediaButtons img {
-	margin: 0;	
-	padding: 0;
+
+.dropdown-menu li > a:hover {
+	background-image: none;
 }
+
+.socialMediaButtons {
+	padding-right:0;
+}
+
+.socialMediaButtons img {
+	height: 32px;
+}
+
+.socialMediaButtonsBottom {
+	text-align: center;
+}
+
+.socialMediaButtonsBottom a {
+	display:inline;
+	vertical-align: bottom;
+	margin: -2px;	
+	padding: 0px;
+}
+
+.socialMediaButtonsBottom img {
+	height: 32px;
+}
+
+.roster th {
+	background-color: #002F8B;
+	color: white;
+}
+.yearSelector {
+	float:right;
+	margin-bottom: 5px;
+}
+.roster {
+	background-color: white;
+	overflow-x:scroll;
+}
+
+

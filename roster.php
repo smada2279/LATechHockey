@@ -1,12 +1,14 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
 		<link rel="stylesheet" href="css/magic-bootstrap-min.css" />
 		<link rel="stylesheet" href="css/main.css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<title>Louisiana Tech Hockey | </title>
+		<title>Louisiana Tech Hockey | Roster</title>
 	</head>
 	
 	<body class="techBlue">
@@ -78,8 +80,44 @@
 				</header>
 			</div>
 			<!-- Content --> 
-			<div class="row">
-				
+			<div class="row techWhite">
+				<div class="col-md-12 roster">
+					<h1 font-family="sans">Team Roster</h1>
+					<p></p>
+					
+					<div class="dropdown yearSelector">
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+							Select a year
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2014-2015</a></li>
+							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2013-2014</a></li>
+							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2012-2013</a></li>
+							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2011-2012</a></li>
+							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2010-2011</a></li>
+						</ul>
+					</div>
+					<table class="table roster">
+						<thead>
+							<tr>
+								<th>#</th><th>NAME</th><th>POS</th><th>SHOOTS</th><th>HEIGHT</th><th>WEIGHT</th><th>CLASS</th><th>MAJOR</th><th>HOMETOWN</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="loading">
+								<td colspan="9">
+									<h2 style="text-align: center;">Loading Data...</h2>
+									<div class="progress">
+										<div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+											<span class="sr-only">Loading Data</span>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 			<!-- Footer -->
 			<!--Display the Bulldogs Hockey Logo on desktop-->
@@ -98,5 +136,34 @@
 				</div>
 			</div>
 		</div>
-	</html>
-</body>
+		<script>
+		
+			$.ajax({
+				url: "lib/GetStats.php",
+				type: "GET",
+				success: function(data, textStatus, jqXHR)
+				{
+					$("#loading").remove();
+					
+					$.each(data, function(index){
+						
+						$("table.roster").append
+						(
+							"<tr><td>" + data[index].number + "</td>"+
+							"<td>"+ data[index].lname + ", " + data[index].fname + "</td>" +
+							"<td>" + data[index].position + "</td>" + 
+							"<td>" + data[index].shoots + "</td>" +
+							"<td>" + data[index].height + "</td>" +
+							"<td>" + data[index].weight + "</td>" +
+							"<td>" + data[index].year + "</td>" +
+							"<td>" + data[index].major + "</td>" +
+							"<td>" + data[index].hometown + "</td>"
+						);
+						
+					});
+				}
+			});
+			
+		</script>
+	</body>
+</html>
