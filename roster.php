@@ -150,8 +150,8 @@
 						
 						$("table.roster").append
 						(
-							"<tr><td>" + data[index].number + "</td>"+
-							"<td>"+ data[index].lname + ", " + data[index].fname + "</td>" +
+							"<tr id=\"player" + data[index].number + "\" data-trigger=\"hover\" data-placement=\"left\"><td>" + data[index].number + "</td>"+
+							"<td class=\"playerName\">"+ data[index].lname + ", " + data[index].fname + "</td>" +
 							"<td>" + data[index].position + "</td>" + 
 							"<td>" + data[index].shoots + "</td>" +
 							"<td>" + data[index].height + "</td>" +
@@ -160,6 +160,10 @@
 							"<td>" + data[index].major + "</td>" +
 							"<td>" + data[index].hometown + "</td>"
 						);
+						
+						var img = '<img src="' + data[index].image + '" />';
+						
+						$("table.roster tr#player" + data[index].number).popover({title: data[index].fname + " " + data[index].lname, content: img, html: true, container: 'body'});
 						
 					});
 				}

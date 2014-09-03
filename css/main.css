@@ -55,7 +55,8 @@
 }
 .roster {
 	background-color: white;
-	overflow-x:scroll;
+	overflow-x: scroll;
+	overflow-y: auto;
 }
 
 .hofText p {
@@ -63,4 +64,6 @@
 	
 }
 
-
+table.roster tr {
+	cursor: pointer;
+}
