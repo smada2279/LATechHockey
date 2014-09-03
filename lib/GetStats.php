@@ -28,6 +28,10 @@
 		
 		// Get player's number
 		$player["number"] = $elem->parent()->parent()->first_child()->innertext;
+		if($player["number"] > 10)
+		{
+			$player["number"] = "0" + $player["number"];
+		}
 		
 		// Get player's name
 		$name = $elem->innertext;

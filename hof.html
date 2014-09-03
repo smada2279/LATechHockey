@@ -1,15 +1,12 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<link rel="stylesheet" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
 		<link rel="stylesheet" href="css/magic-bootstrap-min.css" />
 		<link rel="stylesheet" href="css/main.css" />
-		<script src="js/sorttable.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<title>Louisiana Tech Hockey | Roster</title>
+		<title>Louisiana Tech Hockey | Hall of Fame</title>
 	</head>
 	
 	<body class="techBlue">
@@ -27,7 +24,6 @@
 				</div>
 			</div>
 			<div class="row techWhite">
-				 
 				<header class="navbar navbar-default" role="banner">
 					<div class="navbar-header">
 						<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -82,42 +78,52 @@
 			</div>
 			<!-- Content --> 
 			<div class="row techWhite">
-				<div class="col-md-12 roster">
-					<h1 font-family="sans">Team Roster</h1>
+				<h1 align="center">Hall of Fame</h1>
+				<p></p>
+			</div>
+			<div class="row techWhite">
+				<div class="col-md-6">
+					<h3>Gary Baker #11</h3>
+					<h4>Inducted May 2010</h4>
 					<p></p>
-					
-					<div class="dropdown yearSelector">
-						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-							Select a year
-							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu" role="menu">
-							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2014-2015</a></li>
-							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2013-2014</a></li>
-							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2012-2013</a></li>
-							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2011-2012</a></li>
-							<li role="presentation"><a role="menu-item" tabindex="-1" href="#">2010-2011</a></li>
-						</ul>
-					</div>
-					<table class="table roster sortable">
-						<thead>
-							<tr>
-								<th>#</th><th>NAME</th><th>POS</th><th>SHOOTS</th><th>HEIGHT</th><th>WEIGHT</th><th>CLASS</th><th>MAJOR</th><th>HOMETOWN</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr id="loading">
-								<td colspan="9">
-									<h2 style="text-align: center;">Loading Data...</h2>
-									<div class="progress">
-										<div class="progress-bar progress-bar-striped active"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-											<span class="sr-only">Loading Data</span>
-										</div>
-									</div>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+					<p></p>
+					<p>Gary Baker became the first inductee to the Louisiana Tech Hockey Hall of Fame after the inaugural season. 
+						Gary was the first ever hockey alumnus and has since served as the first ever coach for Louisiana Tech Hockey. 
+						In his first season as coach, he was selected as the Asst. Coach for the 2012 SCHL All-Stars, and lead La Tech Hockey to the playoffs. 
+						Gary has played a pivotal role in the creation and running of the team and has continued to contribute his efforts toward the program. 
+						It is only fitting that his #11 jersey was retired.</p>
+					<p></p>
+					<h3>Kevin Fontenot #26</h3>
+					<h4>Inducted May 2011</h4>
+					<p></p>
+					<p></p>
+					<p>Kevin Fontenot became the first ever SCHL Rookie of the Year. It was also the first ever Rookie of the Year award given in the NCHRA, setting 
+						the standard for what a Louisiana Tech Hockey player should strive for. This achievement lead to Kevin Fontenot becoming the second inductee 
+						to the Louisiana Tech Hockey Hall of Fame.</p>
+					<p></p>	
+					<h3>Cole Luse #9</h3>
+					<h4>Inducted April 2013</h4>
+					<p></p>
+					<p></p>
+					<p>Cole Luse was inducted into the Louisiana Tech Hockey Hall of Fame as the original founder of the program. Cole got the team to be a recognized Club 
+						Sport in the 2008 school year, laying the ground work for the future program. As a player he served as an Alternate Captain for three seasons, as well 
+						as making the SCHL All Stars three seasons. If not for Cole's vision Louisiana Tech Hockey may not exist today. It is these reasons why his #9 jersey was retired.</p>
+					<p></p>	
+					<h3>Michael Hinton #29</h3>
+					<h4>Inducted April 2013</h4>
+					<p></p>
+					<p></p>
+					<p>Michael Hinton was the secondary founder of the program. He took what Cole Luse set up and created a program and entered it into the SCHL (Southwest Collegiate Hockey League). 
+						He led the team into its Inaugural season in 2009-2010 and served as the goalie for the first three seasons. He made two SCHL All Star teams, and in his senior season was given 
+						the 2012 NCRHA's Outstanding Contribution to Collegiate Roller Hockey Award. After graduation he became the Director of Club Development for the SCHL, as well as serving as coach 
+						for Louisiana Tech Hockey. It is for all his contributions that his #29 jersey was retired.</p>
+				</div>
+				<div class="col-md-6">
+					<img class="img-responsive" src="img/BakerAlumni.jpg"/>
+					<p></p>
+					<img class="img-responsive" src = "img/ColeAlumni.jpg" />
+					<p></p>
+					<img class="img-responsive" src="img/HintonAlumni.jpg" />
 				</div>
 			</div>
 			<!-- Footer -->
@@ -137,34 +143,5 @@
 				</div>
 			</div>
 		</div>
-		<script>
-		
-			$.ajax({
-				url: "lib/GetStats.php",
-				type: "GET",
-				success: function(data, textStatus, jqXHR)
-				{
-					$("#loading").remove();
-					
-					$.each(data, function(index){
-						
-						$("table.roster").append
-						(
-							"<tr><td>" + data[index].number + "</td>"+
-							"<td>"+ data[index].lname + ", " + data[index].fname + "</td>" +
-							"<td>" + data[index].position + "</td>" + 
-							"<td>" + data[index].shoots + "</td>" +
-							"<td>" + data[index].height + "</td>" +
-							"<td>" + data[index].weight + "</td>" +
-							"<td>" + data[index].year + "</td>" +
-							"<td>" + data[index].major + "</td>" +
-							"<td>" + data[index].hometown + "</td>"
-						);
-						
-					});
-				}
-			});
-			
-		</script>
-	</body>
-</html>
+	</html>
+</body>
